@@ -13,8 +13,11 @@ let hardware = {
   macroMice: []
 };
 
-const macroKeyboards = [ 'K55 RGB', 'K95 RGB', 'K95 RGB PLATINUM'];
-const macroMice = [ 'SCIMITAR','SCIMITAR PRO RGB' ];
+let keyboardMax = 6;
+
+const macro6Keyboards = [ 'K55 RGB', 'K95 RGB PLATINUM'];
+const macro18Keyboards = [ 'K95 RGB' ];
+const macroMice = [ 'Scimitar','Scimitar PRO RGB' ];
 
 const details = sdk.CorsairPerformProtocolHandshake();
 const errCode = sdk.CorsairGetLastError();
@@ -37,6 +40,7 @@ const n = sdk.CorsairGetDeviceCount();
 
 for (let i = 0; i < n; ++i) {
   const info = sdk.CorsairGetDeviceInfo(i);
+    console.log(info);
   /*if (info.capsMask & sdk.CorsairDeviceCaps.CDC_PropertyLookup) {
     console.log(info);
   }
@@ -48,8 +52,13 @@ for (let i = 0; i < n; ++i) {
 
   if( info.type == sdk.CorsairDeviceType.CDT_Keyboard ) {
     hardware.keyboards.push(info);
-    if( macroKeyboards.includes(info.model) ) {
-      console.log("Macro Keyboard Found");
+    if( macro6Keyboards.includes(info.model) ) {
+      console.log("Macro 6 Keyboard Found");
+      hardware.macroKeyboards.push(info);
+    }
+    else if( macro18Keyboards.includes(info.model) ) {
+      console.log("Macro 18 Keyboard Found");
+      keyboardMax = 18;
       hardware.macroKeyboards.push(info);
     }
   }
@@ -95,13 +104,13 @@ for (const file of modeFiles) {
 */
 
 let createKeyboardMacroKeyStates = () => {
-  for( let i = 1; i < 7; i++ ){
+  for( let i = 1; i <= keyboardMax; i++ ){
     logIt("DEBUG","Creating State "+`Corsair_G${i}_Key_Status`);
     TPClient.createState(`Corsair_G${i}_Key_Status`,`Corsair G${i} Key Status`,'Released');
   }
 };
 let createMiceMacroKeyStates = () => {
-  for( let i = 1; i < 13; i++ ){
+  for( let i = 1; i <= 12; i++ ){
     TPClient.createState(`Corsair_M${i}_Key_Status`,`Corsair M${i} Key Status`,'Released');
   }
 };

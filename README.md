@@ -13,12 +13,12 @@ Integration to your Corsair iCue compatible devices
 Currently only supporting G and M Keys from Specific Models
 
 1. Keyboards
-   1. K55 RGB
-   2. K95 RGB
-   3. K95 RGB PLATINUM
+   1. K55 RGB - 6 G Macro Keys
+   2. K95 RGB - 18 G Macro Keys
+   3. K95 RGB PLATINUM - 6 G Macro Keys
 2. Mice
-   1. SCIMITAR
-   2. SCIMITAR PRO RGB
+   1. Scimitar - 12 M Macro Keys
+   2. Scimitar PRO RGB - 12 M Macro Keys
 
 ## Note
 There are no associated Actions or Events defined directly by this plugin yet, only auto created states based on hardware
