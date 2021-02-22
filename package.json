@@ -1,0 +1,32 @@
+{
+  "name": "touchportal_icue",
+  "version": "1.0.0",
+  "description": "Node.JS interface from Touch Portal to Corsair iCue",
+  "bin": "src/index.js",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "pkg": "pkg .",
+    "pkg-win": "pkg --targets node12-win-x64 .",
+    "pkg-mac": "pkg --targets node12-macos-x64 .",
+    "build-win": "pkg --targets node12-win-x64 . && move touchportal_icue.exe base/Win/TPCorsairiCue/ && copy node_modules\\cue-sdk\\prebuilds\\win32-x64\\* base\\Win\\TPCorsairiCue && del Installers\\TPCorsairiCue-Win.tpp && cd base\\Win && 7z a -tzip ../../Installers/TPCorsairiCue-Win.tpp TPCorsairiCue",
+    "build-mac": "pkg --targets node12-macos-x64 . && move touchportal_icue base/Mac/TPCorsairiCue/ && copy node_modules\\cue-sdk\\prebuilds\\darwin-x64\\* base\\Mac\\TPCorsairiCue && del Installers\\TPCorsairiCue-Mac.tpp && cd base\\Mac && 7z a -tzip ../../Installers/TPCorsairiCue-Mac.tpp TPCorsairiCue"
+  },
+  "pkg": {
+    "scripts":[
+      "src/modes/**/*.js"
+    ],
+    "assets":[ "node_modules/**/*" ]
+  },
+  "keywords": [
+    "TouchPortal",
+    "Corsair",
+    "iCue"
+  ],
+  "author": "Jameson Allen (aka Spdermn02)",
+  "license": "MIT",
+  "dependencies": {
+    "cue-sdk": "^1.6.0",
+    "touchportal-api": "^1.0.6"
+  }
+}
