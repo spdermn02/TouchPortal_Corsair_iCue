@@ -1,0 +1,23 @@
+{
+    "sdk": 3,
+    "version": 1000,
+    "TPDiscord_Version":"1.0.0",
+    "name": "Corsair iCue Plugin",
+    "id": "TPCorsairiCue",
+    "plugin_start_cmd": "\"%TP_PLUGIN_FOLDER%TPCorsairiCue\\touchportal_icue.exe\"",
+    "configuration": {
+        "colorDark": "#23272A",
+        "colorLight": "#7289DA"
+    },
+    "settings": [ ],
+    "categories": [
+        {
+            "id": "TPCorsairiCue",
+            "name": "Corsair iCue",
+            "imagepath": "%TP_PLUGIN_FOLDER%TPCorsairiCue/iCue-Logo.png",
+            "actions": [],
+            "states": [],
+            "events": []
+        }
+    ]
+}
