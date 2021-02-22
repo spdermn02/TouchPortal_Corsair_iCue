@@ -14,7 +14,7 @@ let hardware = {
 };
 
 const macroKeyboards = [ 'K55 RGB', 'K95 RGB', 'K95 RGB PLATINUM'];
-const macroMice = [ ];
+const macroMice = [ 'SCIMITAR','SCIMITAR PRO RGB' ];
 
 const details = sdk.CorsairPerformProtocolHandshake();
 const errCode = sdk.CorsairGetLastError();
@@ -55,6 +55,10 @@ for (let i = 0; i < n; ++i) {
   }
   else if( info.type == sdk.CorsairDeviceType.CDT_Mouse ) {
     hardware.mice.push(info);
+    if( macroMice.includes(info.model) ) {
+      console.log("Macro Mouse Found");
+      hardware.macroMice.push(info);
+    }
   }
 }
 

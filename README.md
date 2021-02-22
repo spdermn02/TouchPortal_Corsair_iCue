@@ -17,7 +17,8 @@ Currently only supporting G and M Keys from Specific Models
    2. K95 RGB
    3. K95 RGB PLATINUM
 2. Mice
-   1. <None> 
+   1. SCIMITAR
+   2. SCIMITAR PRO RGB
 
 ## Note
 There are no associated Actions or Events defined directly by this plugin yet, only auto created states based on hardware
