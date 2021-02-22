@@ -24,9 +24,11 @@ Currently only supporting G and M Keys from Specific Models
 There are no associated Actions or Events defined directly by this plugin yet, only auto created states based on hardware
 ## Usage
 When the plugin starts, if your keyboard/mouse model is detected to have Macro keys, Plug-in States will be auto created related to that type of hardware
-For keyboards G keys, 6 new states will be defined
+
+For keyboards G keys, 6 or 18 new states will be defined <br/>
 "Corsair G# Key Status" - valid values are "Pressed" or "Released"
-For mice M keys, 12 new states will be defined
+
+For mice M keys, 12 new states will be defined <br/>
 "Corsair M# Key Status" - valid values are "Pressed" or "Released"
 
 To utilize these in Touch Portal, use the "When Plug-in State Changes" Event
