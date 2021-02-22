@@ -10,7 +10,7 @@ let hardware = {
   keyboards : [],
   macroKeyboards: [],
   mice :[],
-  macroMice: [],
+  macroMice: []
 };
 
 const macroKeyboards = [ 'K55 RGB', 'K95 RGB', 'K95 RGB PLATINUM'];
@@ -37,14 +37,14 @@ const n = sdk.CorsairGetDeviceCount();
 
 for (let i = 0; i < n; ++i) {
   const info = sdk.CorsairGetDeviceInfo(i);
-  if (info.capsMask & sdk.CorsairDeviceCaps.CDC_PropertyLookup) {
+  /*if (info.capsMask & sdk.CorsairDeviceCaps.CDC_PropertyLookup) {
     console.log(info);
   }
   if (info.capsMask & sdk.CorsairDeviceCaps.CDC_Lighting) {
     console.log(info);
     const leds = getAvailableLeds();
     console.log(leds);
-  }
+  }*/
 
   if( info.type == sdk.CorsairDeviceType.CDT_Keyboard ) {
     hardware.keyboards.push(info);
@@ -61,11 +61,22 @@ for (let i = 0; i < n; ++i) {
 sdk.CorsairSubscribeForEvents((event) =>  { 
   console.log(event);
   if( event.id === 'macrokeydown' ) {
-    TPClient.stateUpdate(`Corsair_G${event.keyId}_Key_Status`,'Pressed');
-
+    if( event.keyId < 19 ) {
+      TPClient.stateUpdate(`Corsair_G${event.keyId}_Key_Status`,'Pressed');
+    }
+    else if( event.keyId > 18 ) {
+      let keyId = event.keyId % 18;
+      TPClient.stateUpdate(`Corsair_M${keyId}_Key_Status`,'Pressed');
+    }
   }
   if( event.id === 'macrokeyup' ) {
-    TPClient.stateUpdate(`Corsair_G${event.keyId}_Key_Status`,'Released');
+    if( event.keyId < 19 ) {
+      TPClient.stateUpdate(`Corsair_G${event.keyId}_Key_Status`,'Released');
+    }
+    else if( event.keyId > 18 ) {
+      let keyId = event.keyId % 18;
+      TPClient.stateUpdate(`Corsair_M${keyId}_Key_Status`,'Released');
+    }
   }
 });
 

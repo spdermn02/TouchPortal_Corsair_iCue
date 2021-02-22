@@ -13,10 +13,12 @@
     "build-mac": "pkg --targets node12-macos-x64 . && move touchportal_icue base/Mac/TPCorsairiCue/ && copy node_modules\\cue-sdk\\prebuilds\\darwin-x64\\* base\\Mac\\TPCorsairiCue && del Installers\\TPCorsairiCue-Mac.tpp && cd base\\Mac && 7z a -tzip ../../Installers/TPCorsairiCue-Mac.tpp TPCorsairiCue"
   },
   "pkg": {
-    "scripts":[
+    "scripts": [
       "src/modes/**/*.js"
     ],
-    "assets":[ "node_modules/**/*" ]
+    "assets": [
+      "node_modules/**/*"
+    ]
   },
   "keywords": [
     "TouchPortal",
