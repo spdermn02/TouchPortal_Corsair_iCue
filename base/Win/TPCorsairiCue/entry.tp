@@ -1,7 +1,7 @@
 {
     "sdk": 3,
-    "version": 1000,
-    "TPDiscord_Version":"1.0.0",
+    "version": 1001,
+    "TPCosrsairiCue":"1.0.01",
     "name": "Corsair iCue Plugin",
     "id": "TPCorsairiCue",
     "plugin_start_cmd": "\"%TP_PLUGIN_FOLDER%TPCorsairiCue\\touchportal_icue.exe\"",
