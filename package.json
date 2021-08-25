@@ -11,8 +11,8 @@
     "pkg": "pkg .",
     "pkg-win": "pkg --targets node12-win-x64 .",
     "pkg-mac": "pkg --targets node12-macos-x64 .",
-    "build-win": "pkg --targets node12-win-x64 . && move touchportal_icue.exe base/Win/TPCorsairiCue/ && copy node_modules\\cue-sdk\\prebuilds\\win32-x64\\* base\\Win\\TPCorsairiCue && del Installers\\TPCorsairiCue-Win.tpp && cd base\\Win && 7z a -tzip ../../Installers/TPCorsairiCue-Win.tpp TPCorsairiCue",
-    "build-mac": "pkg --targets node12-macos-x64 . && move touchportal_icue base/Mac/TPCorsairiCue/ && copy node_modules\\cue-sdk\\prebuilds\\darwin-x64\\* base\\Mac\\TPCorsairiCue && del Installers\\TPCorsairiCue-Mac.tpp && cd base\\Mac && 7z a -tzip ../../Installers/TPCorsairiCue-Mac.tpp TPCorsairiCue"
+    "build-win": "pkg --targets node12-win-x64 . && move touchportal_icue.exe base/Win/TPCorsairiCue/ && copy node_modules\\cue-sdk\\prebuilds\\win32-x64\\* base\\Win\\TPCorsairiCue && del Installers\\TPCorsairiCue-Win.tpp && cd base\\Win && 7z a -tzip ../../Installers/TPCorsairiCue-Win.tpp TPCorsairiCue && cd TPCorsairiCue &&  for /f %F in ('dir /b /a-d ^| findstr /vile \".png .tp\"') do del \"%F\"",
+    "build-mac": "pkg --targets node12-macos-x64 . && move touchportal_icue base/Mac/TPCorsairiCue/ && copy node_modules\\cue-sdk\\prebuilds\\darwin-x64\\* base\\Mac\\TPCorsairiCue && del Installers\\TPCorsairiCue-Mac.tpp && cd base\\Mac && 7z a -tzip ../../Installers/TPCorsairiCue-Mac.tpp TPCorsairiCue && del TPCorsairiCue\\touchportal_icue && cd TPCorsairiCue && for /f %F in ('dir /b /a-d ^| findstr /vile \".png .tp .sh\"') do del \"%F\""
   },
   "pkg": {
     "scripts": [
@@ -31,6 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "cue-sdk": "^1.6.0",
+    "find-process": "^1.4.4",
     "touchportal-api": "^1.0.6"
   }
 }

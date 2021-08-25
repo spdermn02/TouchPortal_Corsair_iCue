@@ -2,10 +2,18 @@
 Touch Portal Corsair iCue integration
 
 - [TouchPortal_Corsair_iCue](#touchportal_corsair_icue)
+  - [Change Log](#change-log)
   - [Description](#description)
   - [Note](#note)
   - [Usage](#usage)
   - [Future Enhancements](#future-enhancements)
+
+## Change Log
+```
+1.1.0
+   -Adding in Process Watcher for iCUE.exe being open and running
+      - Windows only for now
+```
 
 ## Description
 Integration to your Corsair iCue compatible devices
