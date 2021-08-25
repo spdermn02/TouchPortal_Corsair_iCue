@@ -16,6 +16,7 @@
   },
   "pkg": {
     "scripts": [
+      "src/**/*.js",
       "src/modes/**/*.js"
     ],
     "assets": [
