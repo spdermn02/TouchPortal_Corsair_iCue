@@ -176,6 +176,10 @@ TPClient.on("Info", (data) => {
     logIt('INFO',`Starting process watcher for ${app_monitor[platform]}`);
     procWatcher.watch(app_monitor[platform]);
   }
+  else {
+    iCueRunning = true; // Just because i can
+    iCueConnect();
+  }
 });
 
 TPClient.on("connected", () => {
