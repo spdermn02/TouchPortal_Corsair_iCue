@@ -1,6 +1,6 @@
 {
   "name": "touchportal_icue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node.JS interface from Touch Portal to Corsair iCue",
   "bin": {
     "touchportal_icue": "src/index.js"
