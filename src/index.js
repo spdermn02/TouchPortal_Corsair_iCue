@@ -15,7 +15,7 @@ let hardware = {
 
 let keyboardMax = 6;
 
-const macro6Keyboards = [ 'K55 RGB', 'K95 RGB PLATINUM', 'K100 RGB', 'K95 RGB PLATINUM XT'];
+const macro6Keyboards = [ 'K55 RGB', 'K55 RGB PRO', 'K55 RGB PRO XT', 'K57 RGB', 'K95 RGB PLATINUM', 'K95 RGB PLATINUM SE', 'K95 RGB PLATINUM XT', 'K100 RGB'];
 const macro18Keyboards = [ 'K95 RGB' ];
 const macroMice = [ 'Scimitar','Scimitar PRO RGB' ];
 

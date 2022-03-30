@@ -14,10 +14,14 @@ Currently only supporting G and M Keys from Specific Models
 
 1. Keyboards
    1. K55 RGB - 6 G Macro Keys
-   2. K95 RGB - 18 G Macro Keys
-   3. K95 RGB PLATINUM - 6 G Macro Keys
-   4. K95 RGB PLATINUM XT - 6 G Macro Keys
-   5. K100 RGB - 6 G Macro Keys
+   2. K55 RGB PRO - 6 G Macro Keys
+   3. K55 RGB PRO XT - 6 G Macro Keys
+   4. K57 RGB - 6 G Macro Keys
+   5. K95 RGB - 18 G Macro Keys
+   6. K95 RGB PLATINUM - 6 G Macro Keys
+   7. K95 RGB PLATINUM SE - 6 G Macro Keys
+   8. K95 RGB PLATINUM XT - 6 G Macro Keys
+   9. K100 RGB - 6 G Macro Keys
 2. Mice
    1. Scimitar - 12 M Macro Keys
    2. Scimitar PRO RGB - 12 M Macro Keys

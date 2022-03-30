@@ -1,6 +1,6 @@
 {
   "name": "touchportal_icue",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node.JS interface from Touch Portal to Corsair iCue",
   "bin": {
     "touchportal_icue": "src/index.js"
@@ -32,5 +32,8 @@
   "dependencies": {
     "cue-sdk": "^1.6.0",
     "touchportal-api": "^1.0.6"
+  },
+  "devDependencies": {
+    "pkg": "^5.5.2"
   }
 }
