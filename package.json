@@ -32,5 +32,8 @@
   "dependencies": {
     "cue-sdk": "^1.6.0",
     "touchportal-api": "^1.0.6"
+  },
+  "devDependencies": {
+    "pkg": "^5.5.2"
   }
 }
