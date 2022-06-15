@@ -1,3 +1,9 @@
+⚠️DO NOT UPDATE iCue - IT BREAKS THIS PLUGIN ⚠️ 
+Unsure exactly what happened - but my plugin is having issues with the latest version of iCue  4.24.193 
+it can find the hardware, but doesn't respond to the macro keys.
+
+Will look at it when I have time
+
 # TouchPortal_Corsair_iCue
 Touch Portal Corsair iCue integration
 
